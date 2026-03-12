@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">Case Study</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="page-content">
+  <div class="container narrow">
+    <div class="pdf-export-btn">
+      <button class="button small ghost" data-pdf-export>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Export as PDF
+      </button>
+    </div>
+
+    {{ if or .Params.client .Params.industry .Params.duration }}
+    <div class="case-study-meta">
+      {{ with .Params.client }}
+      <div class="meta-item">
+        <span class="meta-label">Client</span>
+        <span class="meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.industry }}
+      <div class="meta-item">
+        <span class="meta-label">Industry</span>
+        <span class="meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.duration }}
+      <div class="meta-item">
+        <span class="meta-label">Duration</span>
+        <span class="meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+      {{ with .Params.services }}
+      <div class="meta-item">
+        <span class="meta-label">Services</span>
+        <span class="meta-value">{{ . }}</span>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.results }}
+    <div class="case-study-results">
+      {{ range .Params.results }}
+      <div class="result-card">
+        <div class="number">{{ .number }}</div>
+        <div class="label">{{ .label }}</div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

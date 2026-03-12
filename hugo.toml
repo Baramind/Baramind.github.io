@@ -1,0 +1,8 @@
+baseURL = "https://baramind.com/"
+languageCode = "en-us"
+title = "Baramind"
+theme = "baramind"
+
+[params]
+  description = "Two decades of data experience. Software consulting, data architecture, and intelligent systems that power your business."
+  tagline = "The Plumbing for Your AI"

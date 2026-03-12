@@ -1,0 +1,6 @@
+name = "Baramind"
+license = "MIT"
+description = "Marketing theme for Baramind — software consulting & data intelligence"
+
+[author]
+  name = "Baramind"

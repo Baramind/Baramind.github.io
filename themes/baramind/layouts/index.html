@@ -1,0 +1,254 @@
+{{ define "main" }}
+
+<!-- ── Hero ─────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Two decades of data experience</p>
+        <h1>The plumbing for&nbsp;your&nbsp;AI</h1>
+        <p class="lead">We architect the data foundations that make intelligent systems possible. From lakehouse design to decision intelligence — we turn messy data estates into competitive&nbsp;advantages.</p>
+        <div class="hero-actions">
+          <a href="{{ "/services/" | relURL }}" class="button primary">Explore Services</a>
+          <a href="{{ "/case-studies/" | relURL }}" class="button ghost">View Case Studies</a>
+        </div>
+        <div class="hero-metrics">
+          <div>
+            <h3>20+</h3>
+            <p>Years of data experience</p>
+          </div>
+          <div>
+            <h3>50+</h3>
+            <p>Enterprise engagements</p>
+          </div>
+          <div>
+            <h3>3</h3>
+            <p>Products shipped</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="data-flow">
+          <div class="flow-layer">
+            <span class="dot rose"></span>
+            <span class="label">Sources</span>
+            <span class="value">ERP &middot; IoT &middot; APIs &middot; Files</span>
+          </div>
+          <div class="flow-connector">&darr;&ensp;ingestion&ensp;&darr;</div>
+          <div class="flow-layer">
+            <span class="dot amber"></span>
+            <span class="label">LakeBase</span>
+            <span class="value">Unified storage layer</span>
+          </div>
+          <div class="flow-connector">&darr;&ensp;data fabric&ensp;&darr;</div>
+          <div class="flow-layer">
+            <span class="dot indigo"></span>
+            <span class="label">Intelligence Engine</span>
+            <span class="value">ML &middot; Analytics &middot; AI</span>
+          </div>
+          <div class="flow-connector">&darr;&ensp;decisions&ensp;&darr;</div>
+          <div class="flow-layer">
+            <span class="dot green"></span>
+            <span class="label">Applications</span>
+            <span class="value">Dashboards &middot; Agents &middot; Workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Core Pillars ────────────────────────────────── -->
+<section class="pillars">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">What we do</p>
+      <h2>Data infrastructure that compounds</h2>
+      <p class="lead">We don't just build pipelines — we design data systems that grow smarter, faster, and more valuable over time.</p>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">&#9671;</div>
+        <h3>Data Fabric Architecture</h3>
+        <p>A unified semantic layer that connects every data source in your organisation — regardless of where it lives or what format it speaks.</p>
+        <span class="tag">Data Fabric</span>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">&#9649;</div>
+        <h3>LakeBase Foundation</h3>
+        <p>Our open lakehouse pattern merges the best of data lakes and warehouses into a single, cost-effective storage layer built for analytics and AI.</p>
+        <span class="tag">LakeBase</span>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">&#9881;</div>
+        <h3>Intelligence Engine</h3>
+        <p>An ML-ready computation layer that sits on top of your data fabric — powering forecasts, anomaly detection, and autonomous decision-making.</p>
+        <span class="tag">Intelligence Engine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Architecture Diagram ────────────────────────── -->
+<section class="architecture">
+  <div class="container">
+    <div class="section-title">
+      <p class="eyebrow">Reference Architecture</p>
+      <h2>From raw data to intelligent decisions</h2>
+      <p class="lead">A layered approach that decouples storage from compute, and compute from intelligence.</p>
+    </div>
+    <div class="arch-diagram">
+      <div class="arch-layers">
+        <div class="arch-layer">
+          <div class="arch-label">Presentation</div>
+          <div class="arch-blocks">
+            <span class="arch-block indigo">Dashboards</span>
+            <span class="arch-block indigo">AI Agents</span>
+            <span class="arch-block indigo">Decision Portals</span>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <svg width="24" height="16" viewBox="0 0 24 16"><path d="M12 0v16M6 10l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">Intelligence</div>
+          <div class="arch-blocks">
+            <span class="arch-block green">Decision Intelligence</span>
+            <span class="arch-block green">Computational Intelligence</span>
+            <span class="arch-block green">Predictive Models</span>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <svg width="24" height="16" viewBox="0 0 24 16"><path d="M12 0v16M6 10l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">Data Fabric</div>
+          <div class="arch-blocks">
+            <span class="arch-block amber">Semantic Layer</span>
+            <span class="arch-block amber">Governance</span>
+            <span class="arch-block amber">Catalog</span>
+            <span class="arch-block amber">Lineage</span>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <svg width="24" height="16" viewBox="0 0 24 16"><path d="M12 0v16M6 10l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">LakeBase</div>
+          <div class="arch-blocks">
+            <span class="arch-block rose">Object Store</span>
+            <span class="arch-block rose">Table Format</span>
+            <span class="arch-block rose">Ingestion</span>
+            <span class="arch-block rose">CDC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How We Work ─────────────────────────────────── -->
+<section class="process">
+  <div class="container">
+    <div class="process-grid">
+      <div>
+        <div class="section-title">
+          <p class="eyebrow">How we work</p>
+          <h2>From assessment to autonomy</h2>
+          <p class="lead">A proven engagement model refined across dozens of enterprise data programmes.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h4>Data Estate Assessment</h4>
+            <p>We audit your existing infrastructure, identify gaps, and map a path from where you are to where you need to be.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h4>Architecture Design</h4>
+            <p>A tailored blueprint covering LakeBase topology, data fabric integration, and intelligence engine placement.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h4>Build &amp; Integrate</h4>
+            <p>We implement iteratively — shipping working pipelines every sprint, not documentation every quarter.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h4>Intelligence Layer</h4>
+            <p>Once the foundation is solid, we layer in ML models, decision engines, and computational intelligence.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">05</span>
+          <div>
+            <h4>Operate &amp; Evolve</h4>
+            <p>Ongoing support, monitoring, and evolution as your data needs grow and new AI capabilities emerge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Quote ────────────────────────────────────────── -->
+<section class="quote">
+  <div class="container narrow">
+    <div class="quote-card">
+      <p>Proper data management isn't glamorous, but it's the difference between AI that works in a demo and AI that works in production. We build the plumbing that makes the magic possible.</p>
+      <span>— Baramind Engineering</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ─────────────────────────────────────── -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-title">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let's talk about your data</h2>
+          <p class="lead">Whether you're modernising a legacy warehouse or building an AI-native platform from scratch — we'd love to hear what you're working on.</p>
+        </div>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </label>
+        <label>
+          Company
+          <input type="text" name="company" placeholder="Acme Corp">
+        </label>
+        <label>
+          What are you looking for?
+          <select name="interest">
+            <option value="">Select an area...</option>
+            <option value="consulting">Software Consulting</option>
+            <option value="data-architecture">Data Architecture</option>
+            <option value="ai-ml">AI / ML Engineering</option>
+            <option value="products">Product Enquiry</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="3" placeholder="Tell us briefly about your project..."></textarea>
+        </label>
+        <button type="submit" class="button primary">Send Message</button>
+        <p class="form-note">We typically respond within one business day.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{ end }}

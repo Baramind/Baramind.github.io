@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">{{ .Section | humanize | title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="page-content">
+  <div class="container narrow">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

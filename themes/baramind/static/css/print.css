@@ -1,0 +1,64 @@
+/* Print stylesheet for case study PDF exports */
+@page {
+  margin: 2cm;
+  size: A4;
+}
+
+body {
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+}
+
+body::before {
+  display: none;
+}
+
+.site-header,
+.site-footer,
+.mobile-nav,
+.nav-toggle,
+.pdf-export-btn,
+.theme-toggle,
+.button {
+  display: none !important;
+}
+
+main {
+  gap: 1rem;
+}
+
+.page-hero {
+  padding: 0 0 0.5rem;
+}
+
+.page-content {
+  padding-bottom: 0;
+}
+
+.result-card {
+  border: 1pt solid #ddd;
+  background: #f8f8f8;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.result-card .number {
+  color: #4f46e5;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+.case-study-results {
+  page-break-inside: avoid;
+}
