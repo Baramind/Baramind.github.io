@@ -19,6 +19,6 @@ We founded Baramind with a simple observation: most AI initiatives fail not beca
 
 ## Our approach
 
-We bring deep technical expertise across the modern data stack — from LakeBase architectures and data fabric design to computational intelligence and decision engines. We've done this across industries: supply chain, financial services, manufacturing, retail, and more.
+We bring deep technical expertise across the modern data stack — from lakebase architectures and data fabric design to computational intelligence and decision engines. We've done this across industries: supply chain, financial services, manufacturing, retail, and more.
 
 <!-- TODO: Add founding story, timeline, or other details as needed -->

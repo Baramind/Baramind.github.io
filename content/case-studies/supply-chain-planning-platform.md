@@ -1,8 +1,8 @@
 ---
 title: "Building a Modern Supply Chain Planning Platform"
-subtitle: "How we designed and built a LakeBase-powered planning system from the ground up."
+subtitle: "How we designed and built a lakebase-powered planning system from the ground up."
 date: 2025-11-01
-summary: "End-to-end supply chain planning platform built on open lakehouse architecture with integrated forecasting."
+summary: "End-to-end supply chain planning platform built on lakebase architecture with integrated forecasting."
 client: "Global Manufacturing Company"
 industry: "Manufacturing & Supply Chain"
 duration: "6 months"
@@ -23,9 +23,9 @@ The client operated a complex global supply chain spanning multiple manufacturin
 
 ## Approach
 
-We designed a layered architecture following our LakeBase + Data Fabric + Intelligence Engine pattern:
+We designed a layered architecture following our lakebase + Data Fabric + Intelligence Engine pattern:
 
-1. **LakeBase Foundation** — Unified all supply chain data (ERP, IoT sensors, POS data, supplier feeds) into a single open table format with full CDC support
+1. **Lakebase Foundation** — Unified all supply chain data (ERP, IoT sensors, POS data, supplier feeds) into a single open table format with full CDC support
 2. **Data Fabric Layer** — Built a semantic model that standardised terminology across regions and business units, with automated lineage tracking
 3. **Intelligence Engine** — Deployed demand forecasting models with automated retraining, anomaly detection on inventory levels, and what-if scenario simulation
 4. **Decision Portal** — A web application for planners to interact with forecasts, adjust plans, and track KPIs

@@ -6,7 +6,7 @@ summary: "A data fabric implementation connecting 40+ source systems into a gove
 client: "Regional Financial Institution"
 industry: "Financial Services"
 duration: "9 months"
-services: "Data Fabric Architecture, Governance, LakeBase Implementation"
+services: "Data Fabric Architecture, Governance, Lakebase Implementation"
 results:
   - number: "40+"
     label: "Source systems integrated"
@@ -26,7 +26,7 @@ The institution had accumulated over a decade of data sprawl — trading systems
 We implemented a comprehensive data fabric architecture:
 
 1. **Assessment** — Catalogued 40+ source systems, mapped data flows, and identified governance gaps
-2. **LakeBase** — Established a centrally governed lakehouse as the single source of truth
+2. **Lakebase** — Established a centrally governed data lake as the single source of truth
 3. **Semantic Layer** — Built a unified business glossary and data catalog with automated lineage
 4. **Governance** — Implemented role-based access, data quality scoring, and compliance audit trails
 
