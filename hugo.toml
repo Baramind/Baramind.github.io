@@ -1,4 +1,4 @@
-baseURL = "https://baramind.com/"
+baseURL = "https://baramind.github.io/"
 languageCode = "en-us"
 title = "Baramind"
 theme = "baramind"
@@ -6,3 +6,7 @@ theme = "baramind"
 [params]
   description = "Two decades of data experience. Software consulting, data architecture, and intelligent systems that power your business."
   tagline = "The Foundations for Your AI"
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
