@@ -1,0 +1,10 @@
+{{- /* dict "page" . "eyebrow" "…" "badge" "…" */ -}}
+{{- $p := .page }}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">{{ .eyebrow | default ($p.Section | humanize) }}</p>
+    <h1>{{ $p.Title }}{{ with .badge }} <span class="badge" style="vertical-align: middle; font-size: 13px; letter-spacing: 0.06em">{{ . }}</span>{{ end }}</h1>
+    {{ with $p.Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .actions }}<div class="btn-row">{{ . }}</div>{{ end }}
+  </div>
+</section>

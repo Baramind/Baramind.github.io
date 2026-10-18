@@ -1,0 +1,36 @@
+title: From a hard decision to a system your team runs.
+steps:
+  - title: Bring us the decision you can’t make well yet.
+    body: >-
+      A forecast nobody trusts. Stock in the wrong places. A plan that lives in
+      a spreadsheet. We start with a short diagnostic of your data and process.
+    you: The problem, and the people who own it
+    we: Assess data, process and quick wins
+    out: A written plan and a scoped first release
+  - title: We build it with your team, in small releases.
+    body: >-
+      Data foundation first, then models, then the screen planners use. Every
+      increment is something you can run and judge — not a slide.
+    you: A planner and a data owner, a little time each week
+    we: Pipelines, models and the planning tool
+    out: Working software at every step
+  - title: Your team runs it. We keep it sharp.
+    body: >-
+      You own the plan and the decisions. We watch the models, retrain as
+      demand shifts, and change the system as your business does.
+    you: Day-to-day planning
+    we: Monitoring, retraining, improvements
+    out: A system that stays accurate
+paths:
+  - label: Start small
+    title: One decision, one data source.
+    body: >-
+      A focused diagnostic and first release. See what’s possible with your own
+      data before committing to more.
+    cta: Start with a diagnostic →
+  - label: Go end to end
+    title: Demand through supply.
+    body: >-
+      Data platform to planning tool, scoped as a programme and built and run
+      with your team.
+    cta: Talk about a bigger project →

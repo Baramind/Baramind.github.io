@@ -1,4 +1,9 @@
-# Embarking on an AI Transformation Journey
+---
+title: "Embarking on an AI Transformation Journey"
+date: 2026-06-06
+topic: "Strategy"
+summary: "Building AI capability is less about tools than about how a company collects, measures and uses its data."
+---
 
 Building AI proficiency is fundamentally different from traditional organizational changes. Integrating AI into an enterprise means more than implementing tools. It is about reshaping how a company operates.
 

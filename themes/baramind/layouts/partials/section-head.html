@@ -1,0 +1,8 @@
+{{- /* dict "eyebrow" "title" "lede" "level" */ -}}
+<div class="section-head">
+  <div>
+    {{ with .eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h2 class="h-section">{{ .title }}</h2>
+  </div>
+  {{ with .lede }}<p>{{ . }}</p>{{ end }}
+</div>

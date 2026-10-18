@@ -3,6 +3,7 @@ title: "Why Your AI Needs Better Foundations"
 date: 2026-02-15
 summary: "Most AI failures aren't model failures — they're data failures. Here's why the boring infrastructure work matters more than you think."
 draft: false
+topic: "Foundations"
 ---
 
 Most AI projects fail. Not because the models are bad, but because the data feeding them is unreliable, inconsistent, or simply missing.

@@ -1,0 +1,15 @@
+title: Three disciplines at one table.
+lede: >-
+  Planning projects usually fail in the gaps — between the model and the data,
+  or the tool and the planner. Our team covers all three sides, so nothing gets
+  lost in hand-offs.
+disciplines:
+  - label: Data science
+    line: Forecasting and optimisation that hold up in production.
+    detail: Statistical and machine-learning forecasting, optimisation and the discipline to test them honestly.
+  - label: Supply chain
+    line: Years inside planning teams, not just around them.
+    detail: Demand, inventory and supply planning, and the S&OP routines that tie them together.
+  - label: Software engineering
+    line: Systems built to be run, not just demoed.
+    detail: Data platforms, APIs and the applications people use every day — built to be operated and changed.

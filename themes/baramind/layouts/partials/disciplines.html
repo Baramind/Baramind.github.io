@@ -1,0 +1,10 @@
+{{- $detail := .detail }}
+<div class="disciplines">
+  {{- range hugo.Data.team.disciplines }}
+  <div class="discipline reveal">
+    <p class="eyebrow">{{ .label }}</p>
+    <p>{{ .line }}</p>
+    {{ if $detail }}<p>{{ .detail }}</p>{{ end }}
+  </div>
+  {{- end }}
+</div>

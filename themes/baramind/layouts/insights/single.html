@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow"><a href="{{ "/insights/" | relURL }}" style="text-decoration:none">Insights</a>{{ with .Params.topic }} · {{ . }}{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}
+    <p class="article-meta">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</p>
+  </div>
+</section>
+<article class="section">
+  <div class="wrap">
+    <div class="prose narrow">{{ .Content }}</div>
+    <div class="narrow article-foot">
+      <a class="link-arrow" href="{{ "/insights/" | relURL }}">← All insights</a>
+      {{ with .NextInSection }}<a class="link-arrow" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </div>
+  </div>
+</article>
+{{ partial "cta-band.html" dict }}
+{{ end }}

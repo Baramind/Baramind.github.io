@@ -3,6 +3,7 @@ title: "Data Fabric vs. Data Mesh: A Pragmatist's Guide"
 date: 2026-01-20
 summary: "Two dominant paradigms for organising enterprise data — and why the right answer is usually 'both, thoughtfully.'"
 draft: false
+topic: "Architecture"
 ---
 
 The data architecture community loves a good framework war. Data Fabric vs. Data Mesh is the current main event. Here's a pragmatic take from the trenches.

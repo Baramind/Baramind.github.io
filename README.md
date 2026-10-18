@@ -21,8 +21,22 @@ hugo server
 
 The site will be available at the local URL printed by Hugo, usually `http://localhost:1313/`.
 
+## Editing content
+
+Most homepage copy lives in `data/` so it can be changed without touching templates:
+
+- `data/products.yaml` — product cards (Demand Pilot, PySmith)
+- `data/services.yaml` — the three services
+- `data/process.yaml` — the "How we work" steps and the two entry paths
+- `data/team.yaml` — the three disciplines
+- `data/faq.yaml` — FAQ answers
+
+Pages live in `content/`: `products/demand-pilot.md`, `services/*.md`, `how-we-work.md`, `about/index.md` and `insights/*.md`.
+New articles go in `content/insights/` with `title`, `date`, `topic` and `summary` in the front matter.
+
 ## Notes
 
-- The contact form is static HTML. To receive submissions, connect it to a service such as Formspree, Basin, Netlify Forms, or replace it with a `mailto:` call to action.
-- If you want to use `baramind.com`, add a `CNAME` file containing `baramind.com`, keep `baseURL` set to `https://baramind.com/`, and configure DNS with your domain provider.
+- Contact form: set `contactEndpoint` in `hugo.toml` (e.g. a Formspree form URL) to receive submissions. While it is empty, the form opens a pre-filled email to `hello@baramind.com`.
+- Custom domain: `static/CNAME` contains `baramind.com` and `baseURL` is `https://baramind.com/`. The domain must also be set under **Settings > Pages**.
+- Theme styles are in `themes/baramind/assets/css/site.css`; colours are CSS variables at the top, with dark-mode values below them.
 - The generated `public/` folder should not be committed; GitHub Actions builds and deploys it automatically.

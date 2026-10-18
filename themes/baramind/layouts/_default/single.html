@@ -1,14 +1,6 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="container narrow">
-    <p class="eyebrow">{{ .Section | humanize | title }}</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
-  </div>
-</section>
-<section class="page-content">
-  <div class="container narrow">
-    {{ .Content }}
-  </div>
+{{ partial "page-hero.html" (dict "page" .) }}
+<section class="section">
+  <div class="wrap"><div class="prose narrow">{{ .Content }}</div></div>
 </section>
 {{ end }}

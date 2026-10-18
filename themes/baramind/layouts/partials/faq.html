@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="wrap faq">
+    <div>
+      <p class="eyebrow">{{ .eyebrow | default "Questions" }}</p>
+      <h2 class="h-section">Fair questions.</h2>
+    </div>
+    <div class="faq-list">
+      {{- range hugo.Data.faq }}
+      <details>
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>

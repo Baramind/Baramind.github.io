@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "Insights") }}
+<section class="section">
+  <div class="wrap grid-3">
+    {{ range .Pages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ end }}
+  </div>
+</section>
+{{ partial "cta-band.html" dict }}
+{{ end }}

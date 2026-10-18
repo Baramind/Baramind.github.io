@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "What we make") }}
+<section class="section">
+  <div class="wrap grid-2">
+    {{ range hugo.Data.products }}{{ partial "product-card.html" . }}{{ end }}
+  </div>
+</section>
+{{ partial "cta-band.html" (dict "title" "Want to try one of them?" "cta" "Ask about access") }}
+{{ end }}

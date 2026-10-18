@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "About") }}
+<section class="section">
+  <div class="wrap">
+    <div class="split" style="margin-bottom: 48px">
+      <div>
+        <p class="eyebrow">The team</p>
+        <h2 class="h-section">{{ hugo.Data.team.title }}</h2>
+      </div>
+      <p>{{ hugo.Data.team.lede }}</p>
+    </div>
+    {{ partial "disciplines.html" (dict "detail" true) }}
+  </div>
+</section>
+<section class="section section-tint">
+  <div class="wrap"><div class="prose narrow">{{ .Content }}</div></div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {{ partial "section-head.html" (dict "eyebrow" "What we do" "title" "Products and services") }}
+    <div class="grid-2">{{ range hugo.Data.products }}{{ partial "product-card.html" . }}{{ end }}</div>
+    <div style="margin-top: 48px">{{ partial "services-rows.html" . }}</div>
+  </div>
+</section>
+{{ partial "contact.html" . }}
+{{ end }}
