@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "How we work") }}
+<section class="section section-inv">
+  <div class="wrap">
+    <h2 class="h-big" style="max-width: 16em; margin-bottom: 64px">{{ hugo.Data.process.title }}</h2>
+    {{ partial "process.html" . }}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {{ partial "section-head.html" (dict "eyebrow" "What to expect" "title" "Principles we hold ourselves to" "lede" "However a project starts, these stay the same.") }}
+    <div class="features">
+      <div class="feature reveal"><h3>Working software, early</h3><p>Every release is something you can run and judge — not a slide or a status report.</p></div>
+      <div class="feature reveal"><h3>Your data stays yours</h3><p>We build in your environment by default, and everything we make for you is yours to keep.</p></div>
+      <div class="feature reveal"><h3>Measured against a baseline</h3><p>Forecasts and models are compared with what you do today, so improvement is shown, not claimed.</p></div>
+      <div class="feature reveal"><h3>Built to hand over</h3><p>Documented, tested and explained, so your team can run it — with or without us.</p></div>
+    </div>
+  </div>
+</section>
+{{ partial "faq.html" dict }}
+{{ partial "contact.html" . }}
+{{ end }}

@@ -1,0 +1,25 @@
+{{- $p := hugo.Data.process }}
+<ol class="steps">
+  {{- range $i, $s := $p.steps }}
+  <li class="step reveal">
+    <span class="step-num">STEP {{ add $i 1 }}</span>
+    <h3>{{ $s.title }}</h3>
+    <p>{{ $s.body }}</p>
+    <dl class="roles">
+      <dt>YOU</dt><dd>{{ $s.you }}</dd>
+      <dt>WE</dt><dd>{{ $s.we }}</dd>
+      <dt>OUT</dt><dd>{{ $s.out }}</dd>
+    </dl>
+  </li>
+  {{- end }}
+</ol>
+<div class="grid-2 paths">
+  {{- range $p.paths }}
+  <div class="path reveal">
+    <p class="eyebrow">{{ .label }}</p>
+    <h3>{{ .title }}</h3>
+    <p>{{ .body }}</p>
+    <a class="link-arrow" href="{{ "/#contact" | relURL }}">{{ .cta }}</a>
+  </div>
+  {{- end }}
+</div>

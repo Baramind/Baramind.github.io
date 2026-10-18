@@ -1,0 +1,24 @@
+- id: data-engineering
+  num: "01"
+  name: Data Engineering
+  summary: >-
+    Pipelines, platforms and data models your team can trust — from ERP and
+    warehouse extracts to a clean, governed layer that analytics and AI can
+    stand on.
+  tags: [Ingestion & CDC, Lakehouse design, Data modelling, Quality & lineage]
+- id: data-science
+  num: "02"
+  name: Data Science
+  summary: >-
+    Forecasting, optimisation and machine learning that survive contact with
+    production — tested, monitored and explainable to the people who rely on
+    them.
+  tags: [Forecasting, Optimisation, ML in production, Applied AI]
+- id: supply-chain-planning
+  num: "03"
+  name: Supply Chain Planning
+  summary: >-
+    End to end: demand, inventory, supply and S&OP. We design the process and
+    build the tooling together, so the plan and the system that produces it
+    actually match.
+  tags: [Demand planning, Inventory policy, Supply planning, S&OP]

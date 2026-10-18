@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "What we do") }}
+<section class="section">
+  <div class="wrap">{{ partial "services-rows.html" . }}</div>
+</section>
+{{ partial "cta-band.html" dict }}
+{{ end }}

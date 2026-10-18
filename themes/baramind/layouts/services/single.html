@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $actions := printf `<a class="btn btn-primary" href="%s">Talk to us</a><a class="btn btn-ghost" href="%s">How we work</a>` ("/#contact" | relURL) ("/how-we-work/" | relURL) | safeHTML }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "Service" "actions" $actions) }}
+<section class="section">
+  <div class="wrap split" style="align-items: start">
+    <h2 class="h-section">The problem we solve</h2>
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</section>
+{{ with .Params.features }}
+<section class="section" style="padding-top: 0">
+  <div class="wrap">
+    {{ partial "section-head.html" (dict "eyebrow" "What’s included" "title" "Where we help") }}
+    <div class="features">
+      {{ range . }}<div class="feature reveal"><h3>{{ .title }}</h3><p>{{ .body }}</p></div>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+<section class="section section-inv">
+  <div class="wrap">
+    <p class="eyebrow">How we work</p>
+    <h2 class="h-big" style="max-width: 16em; margin-bottom: 64px">{{ hugo.Data.process.title }}</h2>
+    {{ partial "process.html" . }}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {{ partial "section-head.html" (dict "eyebrow" "Other services" "title" "Also from Baramind") }}
+    <div class="rows">
+      {{- $self := .File.ContentBaseName }}
+      {{- range hugo.Data.services }}{{ if ne .id $self }}
+      <a class="row" href="{{ printf "/services/%s/" .id | relURL }}"><span class="num">{{ .num }}</span><h3>{{ .name }}</h3><div class="body"><p>{{ .summary }}</p></div></a>
+      {{- end }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ partial "cta-band.html" dict }}
+{{ end }}

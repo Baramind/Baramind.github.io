@@ -1,0 +1,12 @@
+<div class="rows">
+  {{- range hugo.Data.services }}
+  <a class="row reveal" href="{{ printf "/services/%s/" .id | relURL }}">
+    <span class="num">{{ .num }}</span>
+    <h3>{{ .name }}</h3>
+    <div class="body">
+      <p>{{ .summary }}</p>
+      <p class="tags">{{ delimit .tags " · " }}</p>
+    </div>
+  </a>
+  {{- end }}
+</div>

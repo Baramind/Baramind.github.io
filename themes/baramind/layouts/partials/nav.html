@@ -1,38 +1,21 @@
-<nav class="top-nav">
-  <div class="brand">
-    <a href="{{ "/" | relURL }}" class="logo">
-      <svg class="logo-mark" width="28" height="28" viewBox="0 0 24 24" fill="none">
-        <rect x="2" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
-        <rect x="14" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
-        <path d="M10 7h4l-4 10h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>Baramind</span>
-    </a>
-    <span class="tagline">{{ .Site.Params.tagline }}</span>
-  </div>
-  <div class="nav-links">
-    <a href="{{ "/about/" | relURL }}">About</a>
-    <a href="{{ "/services/" | relURL }}">Services</a>
-    <a href="{{ "/products/" | relURL }}">Products</a>
-    <a href="{{ "/team/" | relURL }}">Team</a>
-    <a href="{{ "/insights/" | relURL }}">Insights</a>
-    <a href="{{ "/case-studies/" | relURL }}">Case Studies</a>
-    <a class="primary" href="{{ "/#contact" | relURL }}">Contact Us</a>
+{{- $current := . }}
+<div class="wrap nav">
+  <a href="{{ "/" | relURL }}" class="wordmark" aria-label="Baramind home">{{ partial "logo.html" . }}<span>Baramind</span></a>
+  <nav class="nav-links" aria-label="Main">
+    {{- range site.Menus.main }}
+    <a href="{{ .URL | relURL }}"{{ if or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- end }}
     {{ partial "theme-toggle.html" . }}
-  </div>
-  <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle>
-    <span></span>
-    <span></span>
-    <span></span>
+    <a class="btn btn-primary" href="{{ "/#contact" | relURL }}">Talk to us</a>
+  </nav>
+  <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
-</nav>
-<div class="mobile-nav" data-mobile-nav>
-  <a href="{{ "/about/" | relURL }}">About</a>
-  <a href="{{ "/services/" | relURL }}">Services</a>
-  <a href="{{ "/products/" | relURL }}">Products</a>
-  <a href="{{ "/team/" | relURL }}">Team</a>
-  <a href="{{ "/insights/" | relURL }}">Insights</a>
-  <a href="{{ "/case-studies/" | relURL }}">Case Studies</a>
-  <a class="primary" href="{{ "/#contact" | relURL }}">Contact Us</a>
-  {{ partial "theme-toggle.html" . }}
 </div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" data-mobile-nav>
+  {{- range site.Menus.main }}
+  <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+  {{- end }}
+  <a class="btn btn-primary" href="{{ "/#contact" | relURL }}">Talk to us</a>
+  <div class="mobile-tools"><span>Appearance</span>{{ partial "theme-toggle.html" . }}</div>
+</nav>

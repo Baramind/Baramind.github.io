@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $actions := printf `<a class="btn btn-primary" href="%s">Join the beta</a><a class="btn btn-ghost" href="%s">All products</a>` ("/#contact" | relURL) ("/products/" | relURL) | safeHTML }}
+{{ partial "page-hero.html" (dict "page" . "eyebrow" "Product" "badge" .Params.status "actions" $actions) }}
+<section class="section">
+  <div class="wrap hero-grid" style="align-items: start">
+    <div class="prose" style="flex: 1 1 480px; min-width: 0">{{ .Content }}</div>
+    <div style="flex: 1 1 420px; min-width: 0">{{ partial "forecast-chart.html" . }}</div>
+  </div>
+</section>
+{{ with .Params.features }}
+<section class="section" style="padding-top: 0">
+  <div class="wrap">
+    {{ partial "section-head.html" (dict "eyebrow" "What it does" "title" "Built for the people who own the plan.") }}
+    <div class="features">
+      {{ range . }}<div class="feature reveal"><h3>{{ .title }}</h3><p>{{ .body }}</p></div>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ with .Params.roadmap }}
+<section class="section section-inv">
+  <div class="wrap">
+    <p class="eyebrow">Roadmap</p>
+    <h2 class="h-big" style="max-width: 16em; margin-bottom: 56px">From demand signal to supply decision.</h2>
+    <ol class="steps steps-4">
+      {{ range $i, $r := . }}
+      <li class="step reveal"{{ if not $r.on }} style="border-top-color: var(--line)"{{ end }}>
+        <span class="step-num"{{ if not $r.on }} style="color: var(--muted)"{{ end }}>{{ upper $r.when }}</span>
+        <h3>{{ $r.stage }}</h3>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}
+{{ partial "contact.html" . }}
+{{ end }}

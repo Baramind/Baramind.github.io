@@ -1,27 +1,10 @@
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>Baramind</h4>
-        <p>Two decades of data experience. We build the foundations for your AI — so your intelligence layer has a rock-solid base.</p>
-      </div>
-      <div>
-        <h5>Services</h5>
-        <a href="{{ "/services/" | relURL }}">Consulting</a>
-        <a href="{{ "/products/" | relURL }}">Products</a>
-        <a href="{{ "/case-studies/" | relURL }}">Case Studies</a>
-        <a href="{{ "/insights/" | relURL }}">Insights</a>
-      </div>
-      <div>
-        <h5>Company</h5>
-        <a href="{{ "/about/" | relURL }}">About</a>
-        <a href="{{ "/team/" | relURL }}">Team</a>
-        <a href="mailto:hello@baramind.com">Contact</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; {{ now.Format "2006" }} Baramind</span>
-      <span>Built with Hugo</span>
-    </div>
+  <div class="wrap">
+    <a href="{{ "/" | relURL }}" class="wordmark">{{ partial "logo.html" . }}<span>Baramind</span></a>
+    <nav aria-label="Footer">
+      {{- range site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    </nav>
+    <span>&copy; {{ now.Format "2006" }} Baramind</span>
   </div>
 </footer>

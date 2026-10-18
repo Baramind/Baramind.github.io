@@ -1,0 +1,6 @@
+<a class="post-card reveal" href="{{ .RelPermalink }}">
+  <span class="meta">{{ with .Params.topic }}{{ upper . }} · {{ end }}{{ .Date.Format "Jan 2006" }}</span>
+  <span class="title">{{ .Title }}</span>
+  {{ with .Params.summary }}<span class="summary">{{ . }}</span>{{ end }}
+  <span class="more">Read →</span>
+</a>

@@ -1,0 +1,17 @@
+<article class="card reveal">
+  <div class="card-top">
+    <h3>{{ .name }}</h3>
+    <span class="badge">{{ .status }}</span>
+  </div>
+  <p class="card-tagline">{{ .tagline }}</p>
+  <p class="muted">{{ .summary }}</p>
+  {{- with .roadmap }}
+  <div class="roadmap" role="img" aria-label="Roadmap: {{ range $i, $r := . }}{{ if $i }}, {{ end }}{{ $r.stage }} {{ $r.when }}{{ end }}">
+    {{ range . }}<span{{ if .on }} class="on"{{ end }}>{{ .stage }}</span>{{ end }}
+    {{ range . }}<span class="bar{{ if .on }} on{{ end }}"></span>{{ end }}
+    {{ range . }}<span>{{ .when }}</span>{{ end }}
+  </div>
+  {{- end }}
+  {{- with .code }}<pre class="code" aria-label="Example agent session">{{ . | safeHTML }}</pre>{{ end }}
+  <a class="link-arrow" href="{{ if .external }}{{ .link }}{{ else }}{{ .link | relURL }}{{ end }}"{{ if .external }} rel="noopener"{{ end }}>{{ .link_label }}{{ if not .external }} →{{ end }}</a>
+</article>

@@ -1,24 +1,16 @@
 ---
-title: "About Baramind"
-subtitle: "Two decades of data experience, distilled into consulting and products that work."
+title: "About"
+layout: about
+aliases: ["/team/"]
+subtitle: "Baramind is a data and software firm. We build our own products for planning and AI, and help companies build theirs."
 ---
-
-## Who we are
-
-Baramind is a software consulting firm specialising in data infrastructure, intelligent systems, and applied AI. We help organisations transform raw data estates into production-grade platforms that power real business decisions.
-
-We founded Baramind with a simple observation: most AI initiatives fail not because of bad models, but because of bad data. The plumbing matters more than the polish.
 
 ## What we believe
 
-**Data is infrastructure, not a project.** The organisations that win are the ones that treat their data layer with the same rigour as their production systems — versioned, tested, monitored, and continuously improved.
+**Data is infrastructure, not a project.** The organisations that get value from AI treat their data layer like production software: versioned, tested, monitored and continuously improved.
 
-**Intelligence compounds.** Every well-structured dataset, every clean pipeline, every governed schema makes the next AI initiative faster and more reliable.
+**Trust beats accuracy on paper.** A slightly less accurate forecast that planners understand and use beats a better one they override.
 
-**Shipping beats planning.** We deliver working systems every sprint. Documentation is a by-product, not a milestone.
+**Ship working software.** We deliver something you can run at every step. Documentation is a by-product, not a milestone.
 
-## Our approach
-
-We bring deep technical expertise across the modern data stack — from lakebase architectures and data fabric design to computational intelligence and decision engines. We've done this across industries: supply chain, financial services, manufacturing, retail, and more.
-
-<!-- TODO: Add founding story, timeline, or other details as needed -->
+**Build what we sell.** We make our own products on the same foundations we build for others, so we live with the consequences of our choices.

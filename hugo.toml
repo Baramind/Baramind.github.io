@@ -1,11 +1,42 @@
-baseURL = "https://baramind.github.io/"
-languageCode = "en-us"
+baseURL = "https://baramind.com/"
+locale = "en-AU"
+disableKinds = ["taxonomy", "term"]
 title = "Baramind"
 theme = "baramind"
+enableRobotsTXT = true
 
 [params]
-  description = "Two decades of data experience. Software consulting, data architecture, and intelligent systems that power your business."
-  tagline = "The Foundations for Your AI"
+  description = "Baramind builds software for planning and AI, and helps companies build the data foundations, models and planning tools they run on."
+  tagline = "Data products & services"
+  email = "hello@baramind.com"
+  # Paste a form endpoint (e.g. https://formspree.io/f/xxxxxxx) to receive
+  # contact-form submissions. Left empty, the form opens a pre-filled email.
+  contactEndpoint = ""
+
+[menus]
+  [[menus.main]]
+    name = "Products"
+    pageRef = "/products"
+    weight = 10
+  [[menus.main]]
+    name = "Services"
+    pageRef = "/services"
+    weight = 20
+  [[menus.main]]
+    name = "How we work"
+    pageRef = "/how-we-work"
+    weight = 30
+  [[menus.main]]
+    name = "Insights"
+    pageRef = "/insights"
+    weight = 40
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 50
+
+[markup.goldmark.renderer]
+  unsafe = false
 
 [caches]
   [caches.images]

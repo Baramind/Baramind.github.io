@@ -1,0 +1,32 @@
+- id: demand-pilot
+  name: Demand Pilot
+  status: Beta
+  tagline: Demand planning that shows its working.
+  summary: >-
+    Forecasts by item and location, with the drivers and the uncertainty in
+    plain view — so planners can adjust with confidence instead of overriding
+    blind. Demand first; inventory, supply and S&OP next, on the way to
+    end-to-end supply chain planning.
+  link: /products/demand-pilot/
+  link_label: See Demand Pilot
+  roadmap:
+    - { stage: Demand, when: now, on: true }
+    - { stage: Inventory, when: next }
+    - { stage: Supply, when: roadmap }
+    - { stage: S&OP, when: roadmap }
+- id: pysmith
+  name: PySmith
+  status: Private preview
+  tagline: A Python desk for long-running AI agents.
+  summary: >-
+    A persistent, controlled Python runtime agents reach over MCP. Packages,
+    files and processes stay put between sessions, for days or weeks — no
+    servers to babysit.
+  link: https://pysmith.com
+  link_label: Visit pysmith.com ↗
+  external: true
+  code: |-
+    <span class="c">agent →</span> python.exec("import pandas as pd")
+    <span class="c">agent →</span> python.exec("df = pd.read_parquet('orders.parquet')")
+    <span class="c"># next day, same desk</span>
+    <span class="c">agent →</span> python.exec("df.shape")
